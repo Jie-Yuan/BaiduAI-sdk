@@ -17,7 +17,7 @@ class BaiDuNLP(object):
         url = f'https://aip.baidubce.com/rpc/2.0/nlp{api_url}?charset=UTF-8&access_token=' + self.access_token
         
         # the input is json format
-        input_text = {'text': text}
+        input_text = {'text': text} # {'data': text}
         input_text = json.dumps(input_text)
         
         r = requests.post(url, data=input_text, headers={'Content-Type': 'application/json'})
