@@ -1,30 +1,29 @@
-# 安装Python SDK
+## 说明书
 
-## 目录结构
+### nlp
+```python
+from aip import AipNlp, 
+APP_ID = '11515591'
+API_KEY = 'MnLk1hDXdIzGSqgudr3190yB'
+SECRET_KEY = 'FXseFlaYU4cFiq1x1NfWAiVEyWRPdGVG '
+client = AipNlp(APP_ID, API_KEY, SECRET_KEY)
 ```
-    ├── aip                   // SDK目录
-    │   ├── __init__.py       // 导出类
-    │   ├── base.py           // aip基类
-    │   ├── speech.py         // 语音
-    │   ├── face.py           // 人脸
-    │   ├── ocr.py            // OCR
-    │   ├── nlp.py            // NLP
-    │   ├── kg.py             // 知识图谱
-    │   ├── imagecensor.py    // 图像审核
-    │   ├── imageclassify.py  // 图像识别
-    │   └── imagesearch.py    // 图像搜索
-    └── setup.py              //setuptools安装
 ```
+client.commentTag # 评论观点抽取
+client.depParser # 依存句法分析
+client.dnnlm # 中文DNN语言模型接口用于输出切词结果并给出每个词在句子中的概率值,判断一句话是否符合语言表达习惯（ppl越小越好）。
+client.ecnet # 文本纠错 未开放
+client.emotion # 对话情绪识别接口  pessimistic neutral  optimistic
+client.keyword # 文章标签
+client.lexer # 词法分析
+client.lexerCustom
+client.sentimentClassify # 情感倾向分析 0:负向，1:中性，2:正向
+client.simnet # 短文本相似度
+client.topic # 文章分类：首批支持娱乐、体育、科技等26个主流内容类型，为文章聚类、文本内容分析等应用提供基础技术支持
 
-**支持 Python版本：2.7.+ ,3.+**
+client.wordEmbedding # 词向量
+client.wordSimEmbedding # 词义相似度
 
-**安装步骤如下：**
-
-1. ``` pip install git+https://github.com/Baidu-AIP/python-sdk.git@master ```
-
-2. ``` from aip import 对应服务 ```即可
-
-
-# 使用文档
-
-参考[官方网站](http://ai.baidu.com/docs#/Begin/top)
+client.post
+client.setConnectionTimeoutInMillis
+```
