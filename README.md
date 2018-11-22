@@ -27,3 +27,11 @@ client.wordSimEmbedding # 词义相似度
 client.post
 client.setConnectionTimeoutInMillis
 ```
+
+
+- 内容审核
+```
+APP_ID = "14910672"
+API_KEY = "quiV9tZGK9ojl1CyU1yGPLm7"
+SECRET_KEY = "7xglWFskKwu9bwxt98IDHOaeQeu466sT"
+```
