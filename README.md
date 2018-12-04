@@ -31,7 +31,9 @@ client.setConnectionTimeoutInMillis
 
 - 内容审核
 ```
+from aip import AipImageCensor
 APP_ID = "14910672"
 API_KEY = "quiV9tZGK9ojl1CyU1yGPLm7"
 SECRET_KEY = "7xglWFskKwu9bwxt98IDHOaeQeu466sT"
+client = AipImageCensor(APP_ID, API_KEY, SECRET_KEY)
 ```
