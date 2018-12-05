@@ -1,0 +1,26 @@
+```
+"""
+COM9 18803374772
+COM10 15131736224
+COM11 15130759475
+COM12 18803374662
+COM13 18803374658
+COM14 15100374927
+COM15 18803375264
+COM16 15130779548
+COM17 18803374774
+COM18 15130760014
+"""
+s = \
+"""
+15053874
+gnVPKYHAG5gVKFGymrCE16fc
+ugaNbKv7BAuVaiwX4ms17hMxPzcxCZYK
+"""
+from aip import AipImageCensor, AipNlp
+api = s.strip().split('\n')
+print(','.join(api))
+
+AipNlp(*api).emotion('今天天气真好')
+AipImageCensor(*api).antiSpam('今天天气真好')
+```
