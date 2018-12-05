@@ -1,13 +1,6 @@
 ## 说明书
 
 ### nlp
-```python
-from aip import AipNlp, 
-APP_ID = '11515591'
-API_KEY = 'MnLk1hDXdIzGSqgudr3190yB'
-SECRET_KEY = 'FXseFlaYU4cFiq1x1NfWAiVEyWRPdGVG '
-client = AipNlp(APP_ID, API_KEY, SECRET_KEY)
-```
 ```
 client.commentTag # 评论观点抽取
 client.depParser # 依存句法分析
@@ -26,14 +19,4 @@ client.wordSimEmbedding # 词义相似度
 
 client.post
 client.setConnectionTimeoutInMillis
-```
-
-
-- 内容审核
-```
-from aip import AipImageCensor
-APP_ID = "14910672"
-API_KEY = "quiV9tZGK9ojl1CyU1yGPLm7"
-SECRET_KEY = "7xglWFskKwu9bwxt98IDHOaeQeu466sT"
-client = AipImageCensor(APP_ID, API_KEY, SECRET_KEY)
 ```
